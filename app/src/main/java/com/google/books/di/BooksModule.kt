@@ -1,8 +1,6 @@
 package com.google.books.di
 
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelStoreOwner
 import com.google.books.repository.BooksApiService
 import com.google.books.repository.BooksRepository
 import com.google.books.repository.BooksRepositoryApi
@@ -23,6 +21,4 @@ internal abstract class BooksModule {
     @Binds @IntoMap
     @ClassKey(BooksApiService::class)
     abstract fun lookupBooksApiService(impl: BooksApiService): Any
-
-
 }
